@@ -123,6 +123,7 @@ h3 { font-weight: 600; font-size: 1.15rem; }
   background: #FF9F43;
   transform: scale(1.03);
 }
+.nav-cta .nav-cta-short { display: none; }
 
 /* ===== HERO ===== */
 .hero {
@@ -366,7 +367,7 @@ h3 { font-weight: 600; font-size: 1.15rem; }
   overflow: hidden;
   background: #0B1F33;
   /* Height: comfortable on desktop & mobile */
-  height: clamp(64px, 9vw, 76px);
+  height: clamp(72px, 10vw, 88px);
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -591,7 +592,6 @@ h3 { font-weight: 600; font-size: 1.15rem; }
 }
 .founder h2 { text-align: center; margin-bottom: 8px; }
 .founder-badge {
-  text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
@@ -600,15 +600,12 @@ h3 { font-weight: 600; font-size: 1.15rem; }
   color: #F28C28;
   margin-bottom: 48px;
   border: 1px solid rgba(242,140,40,0.3);
-  display: inline-block;
+  display: block;
+  width: fit-content;
   padding: 6px 20px;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
-  /* center the inline-block badge */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 .founder-card {
   background: rgba(255,255,255,0.04);
@@ -859,9 +856,17 @@ h3 { font-weight: 600; font-size: 1.15rem; }
   .solution-grid {
     grid-template-columns: 1fr;
   }
+  .founder-badge { text-align: center; }
   .founder-card { padding: 32px 24px; }
   .commitment { padding: 24px; }
-  .nav-cta { padding: 8px 18px; font-size: 0.8rem; }
+  .nav-cta {
+    padding: 6px 12px;
+    font-size: 0.65rem;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .nav-cta .nav-cta-full { display: none; }
+  .nav-cta .nav-cta-short { display: inline; }
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 36px;
